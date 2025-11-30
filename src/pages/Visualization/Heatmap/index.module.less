@@ -1,0 +1,85 @@
+.page {
+  padding: 16px 20px;
+}
+
+.filterBar {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  color: var(--td-text-color-secondary);
+  font-size: 13px;
+  margin-right: 4px;
+}
+
+.contentRow {
+  display: flex;
+  gap: 16px;
+}
+
+/* 左侧地图卡片 */
+.mapCard {
+  flex: 2;
+}
+
+.mapContainer {
+  height: 420px;
+}
+
+/* 右侧统计卡片区域 */
+.sidePanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cityRankTable {
+  margin-top: 8px;
+}
+.mapCard {
+  flex: 2;
+  position: relative; // ★ 新增：方便在地图上绝对定位图例
+}
+
+.mapContainer {
+  height: 420px;
+}
+
+/* ★ 新增：地图右下角图例 */
+.legend {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.legendTitle {
+  margin-bottom: 4px;
+  color: var(--td-text-color-secondary);
+}
+
+.legendBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendGradient {
+  width: 80px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #4facfe, #00f2fe, #f6d365, #ff9a9e); // 低 → 高
+}
+
+.legendLabel {
+  color: var(--td-text-color-secondary);
+}
