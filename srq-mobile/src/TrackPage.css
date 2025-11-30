@@ -1,0 +1,426 @@
+/* src/TrackPage.css */
+
+/* 页面背景 */
+.track-page {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", sans-serif;
+}
+
+/* 顶部地图区域 */
+.track-map {
+  position: relative;
+  min-height: 220px;
+  background: #d4f0ff;
+  overflow: hidden;
+}
+
+/* 高德地图容器 */
+.track-map-inner {
+  position: absolute;
+  inset: 0;
+}
+
+/* 地图上的 toolbar */
+.track-map-toolbar {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.track-icon-back {
+  font-size: 22px;
+  color: #333;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.track-map-toolbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+.track-map-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.track-map-pill-more {
+  width: 32px;
+  justify-content: center;
+}
+
+/* 右下角橙色状态气泡 */
+.track-map-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  max-width: 70%;
+}
+
+.track-map-badge-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff6a00;
+}
+
+.track-map-badge-sub {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #666;
+}
+
+.track-map-badge-eta {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #333;
+}
+
+/* 底部小驿站 */
+.track-map-station {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.track-map-station-icon {
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+/* 主体白色卡片区域 */
+.track-main {
+  margin-top: -12px;
+  background: #ffffff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 12px 12px 24px;
+}
+
+/* 快递信息行 */
+.track-express-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.track-express-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.track-express-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffd54f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.track-express-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-express-name {
+  font-size: 13px;
+  color: #333;
+}
+
+.track-express-no {
+  font-size: 12px;
+  color: #888;
+}
+
+.track-express-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.track-link-btn {
+  border: none;
+  background: transparent;
+  color: #409eff;
+  font-size: 13px;
+  padding: 0;
+}
+
+/* ===== 时间轴 ===== */
+.track-timeline-card {
+  margin-top: 10px;
+  padding: 4px 4px 0;
+}
+
+.track-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #666;
+}
+
+.track-timeline-icon {
+  position: relative;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.track-timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: -4px;
+  left: 10px;
+  border-left: 1px dashed #c0c0c0;
+}
+
+.track-timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #d3d3d3;
+  margin-top: 4px;
+}
+
+.track-timeline-content {
+  flex: 1;
+  padding-left: 8px;
+  padding-bottom: 12px;
+}
+
+.track-timeline-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.track-status {
+  font-weight: 500;
+  color: #333;
+}
+
+.track-time {
+  color: #999;
+  margin-left: 8px;
+}
+
+.track-timeline-desc {
+  line-height: 1.4;
+  color: #555;
+  font-size: 12px;
+}
+
+/* 当前节点：橙色高亮 */
+.track-timeline-item--active .track-status {
+  color: #ff6a00;
+}
+
+.track-timeline-item--active .track-timeline-dot {
+  border-color: #ff6a00;
+  background: #ff6a00;
+}
+
+/* 更多物流明细 */
+.track-more-logistics {
+  margin: 10px 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.track-more-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.track-more-btn {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: #555;
+  padding: 0;
+}
+
+/* 收货地址信息 */
+.track-address-card {
+  margin-top: 8px;
+  padding: 10px 4px 0;
+  border-top: 1px solid #f2f2f2;
+}
+
+.track-address-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.track-address-icon {
+  font-size: 16px;
+}
+
+.track-address-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.track-address-sub {
+  font-size: 13px;
+  color: #555;
+}
+
+.track-address-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #f5f5f7;
+  font-size: 11px;
+  color: #888;
+}
+
+/* 下方订单信息 */
+.track-order-card {
+  margin-top: 14px;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.track-order-shop-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.track-order-shop-tag {
+  color: #ff0036;
+  font-weight: 600;
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.track-order-shop-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.track-order-status {
+  font-size: 13px;
+  color: #ff6a00;
+}
+
+.track-order-product {
+  display: flex;
+  align-items: flex-start;
+}
+
+.track-order-thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background: #f7f7f7;
+  margin-right: 8px;
+}
+
+.track-order-info {
+  flex: 1;
+}
+
+.track-order-title {
+  font-size: 13px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.track-order-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #888;
+}
+
+.track-order-tags {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.track-order-tags span {
+  font-size: 11px;
+  color: #ff5000;
+  background: #fff4ec;
+  border-radius: 2px;
+  padding: 2px 4px;
+}
+
+.track-order-price {
+  text-align: right;
+  font-size: 14px;
+  color: #333;
+}
+
+.track-order-count {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* 调试按钮：重置小车 */
+.track-dev-tools {
+  padding: 8px 4px 0;
+  text-align: right;
+}
+
+.track-dev-btn {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid #ffb78a;
+  background: #fff7f0;
+  color: #ff6a00;
+  cursor: pointer;
+}
