@@ -1,0 +1,110 @@
+/* src/pages/Visualization/Abnormal/index.module.less */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 顶部筛选条 */
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filterLabel {
+  font-size: 14px;
+  color: var(--td-text-color-secondary);
+}
+
+/* 顶部三张指标卡片 */
+.summaryRow {
+  display: flex;
+  gap: 16px;
+}
+
+.summaryItem {
+  flex: 1;
+}
+
+.summaryValue {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.summarySub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--td-text-color-secondary);
+}
+
+/* 下方左右两块区域 */
+.contentRow {
+  display: flex;
+  gap: 16px;
+}
+
+.leftPanel,
+.rightPanel {
+  flex: 1;
+  display: flex;
+}
+
+/* 让 Card 撑满高度，左右等高 */
+.leftPanel :global(.t-card),
+.rightPanel :global(.t-card) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 异常订单列表表格缩小一点字体 */
+.abnormalTable :global(.t-table__content) {
+  font-size: 13px;
+}
+
+/* 异常类型 / 严重等级的 Tag 列，居中一点 */
+.typeCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 右侧城市排行里条形图样式 */
+.barCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barTrack {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--td-bg-color-component);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(to right, #e34d59, #ffb200);
+}
+
+.barLabel {
+  width: 46px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--td-text-color-secondary);
+}
+
+/* 订单号可以做成“链接感”一点 */
+.orderIdLink {
+  color: var(--td-brand-color);
+  cursor: pointer;
+}
+
+.orderIdLink:hover {
+  text-decoration: underline;
+}
